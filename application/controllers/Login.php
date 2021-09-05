@@ -20,6 +20,13 @@ class Login extends CI_Controller
 		$this->form_validation->set_rules('password', 'Password', 'callback_password_check[' . $post['username'] . ']');
 		if ($this->form_validation->run() == TRUE) {
 			$post = $this->input->post(null, TRUE);
+			$data = $this->Mlogin->check_user($post)->row_array();
+			$user_data = array(
+				'login_auth' => TRUE,
+				'status_login' => 'success',
+				'iduser' => $data['id']
+			);
+			$this->session->set_userdata('userData', $user_data);
 			$json = [
 				'status' => true
 			];
