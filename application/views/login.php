@@ -63,6 +63,11 @@
                             } else {
                                 $('#username_error').html('');
                             }
+                            if (data.password_error != '') {
+                                $('#password_error').html(data.password_error);
+                            } else {
+                                $('#password_error').html('');
+                            }
                         } else {
                             window.location.href = "<?= site_url('welcome') ?>";
                         }
