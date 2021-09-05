@@ -1,0 +1,421 @@
+span.required {
+	color: #ff0000;
+}
+
+.garis {
+	border-left: 1px solid #0aabcc;
+}
+
+.value {
+	float: right;
+	margin-right: -10px;
+}
+
+.bg-remainder {
+	background-color: #f2dede
+}
+
+.m-t-1,
+.m-y-1 {
+	margin-top: 10px !important;
+}
+
+.m-b-1,
+.m-y-1 {
+	margin-bottom: 10px !important;
+}
+
+.m-p-1 {
+	padding-top: 15px !important
+}
+
+.m-pb-1 {
+	padding-bottom: 15px !important
+}
+
+.has-error .select2-selection {
+	border-color: #dd4b39 !important;
+}
+
+.user-profil {
+	margin: 5px 0;
+}
+
+.dropdown-menu>.active>a,
+.dropdown-menu>.active>a:focus,
+.dropdown-menu>.active>a:hover {
+	background-color: #777;
+}
+
+.page-header {
+	margin: 0;
+	font-size: 16px;
+	border-bottom: 0;
+}
+
+.alert {
+	/* margin: 10px; */
+	padding: 6px;
+	margin-bottom: 0;
+	border-radius: 2px;
+}
+
+.bg-red,
+.callout.callout-danger,
+.alert-danger,
+.alert-error,
+.label-danger,
+.modal-danger .modal-body {
+	background-color: #eb613e !important;
+}
+
+.alert-danger {
+	color: #b05b59;
+	border-color: #e0b4b4;
+	background-color: #fff6f6;
+}
+
+.alert-danger {
+	background-color: #e46050;
+	background-image: linear-gradient(45deg, rgba(255, 255, 255, .04) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .04) 50%, rgba(255, 255, 255, .04) 75%, transparent 75%, transparent);
+	background-size: 20px 20px;
+}
+
+.alert-danger {
+	border-color: #e14c3a;
+}
+
+.alert-info {
+	color: #528d9e;
+	border-color: #a9d5de;
+	background-color: #f8ffff
+}
+
+.alert-info {
+	background-color: #59c4e4;
+	background-image: linear-gradient(45deg, rgba(255, 255, 255, .04) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .04) 50%, rgba(255, 255, 255, .04) 75%, transparent 75%, transparent);
+	background-size: 20px 20px;
+}
+
+.alert-info {
+	border-color: #9bdbef !important;
+}
+
+.text-warning,
+.text-warning a,
+.text-warning:active,
+.text-warning:focus,
+.text-warning:hover,
+.text-warning[href] {
+	color: #cf7f0c !important;
+}
+
+.text-rest {
+	color: rgb(250, 89, 29);
+	font-weight: 600;
+}
+
+.box {
+	border-radius: 0;
+}
+
+.modal-content {
+	border-radius: 5px;
+}
+
+.modal-header {
+	background: #f3f4f5;
+	border-bottom: 1px solid #dcdfe1;
+	border-top-right-radius: .3rem;
+	border-top-left-radius: .3rem;
+}
+
+.modal-footer {
+	background: #f3f4f5;
+	border-top: 1px solid #dcdfe1;
+	border-bottom-right-radius: .3rem;
+	border-bottom-left-radius: .3rem;
+}
+
+label {
+	font-weight: 400;
+}
+
+label.required::after {
+	margin-left: 2px;
+	content: "*";
+	color: red;
+}
+
+.label {
+	display: block;
+	line-height: 16px;
+	font-weight: 400;
+	font-size: 85% !important;
+}
+
+/* Tombol Back */
+.text-back {
+	color: #555 !important;
+	padding: 0 10px 0 0;
+}
+
+.box.box-solid>.box-header .btn:hover,
+.box.box-solid>.box-header a:hover {
+	background: transparent !important;
+	border-radius: 10px;
+}
+
+/* End Tombol Back */
+
+/* Begin Detail Order */
+.order-detail {
+	background-color: rgb(255, 255, 255);
+	box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 2px 0px;
+}
+
+.u-semibold {
+	font-weight: 600;
+}
+
+/* color: rgba(49, 53, 59, 0.96); */
+
+.text--grey {
+	color: rgb(128, 128, 128);
+}
+
+.text--red {
+	color: rgb(250, 89, 29);
+}
+
+.text--orange {
+	color: rgb(252, 160, 0);
+}
+
+.text--green {
+	color: rgb(3, 172, 14);
+}
+
+.text--blue {
+	color: #4e9bf6;
+}
+
+.u-m2 {
+	/* margin: 1rem; */
+	margin: 1rem 0 1rem 0;
+}
+
+.u-rounded {
+	border-radius: 3px;
+}
+
+.u-p2 {
+	padding: 1rem;
+}
+
+.u-py1 {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.u-line-height-4 {
+	line-height: 1.5;
+}
+
+.u-inline-block {
+	display: inline-block;
+}
+
+.u-semibold {
+	font-weight: 600;
+}
+
+.u-col-6 {
+	width: 50%;
+}
+
+.css-17p3x0d-unf-heading {
+	display: block;
+	position: relative;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 18px;
+	color: rgba(49, 53, 59, 0.68);
+	text-decoration: initial;
+	margin: 0px;
+}
+
+.css-a15b4m-unf-heading {
+	display: block;
+	position: relative;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 22px;
+	color: rgba(49, 53, 59, 0.96);
+	text-decoration: initial;
+	margin: 0px;
+}
+
+.css-1y3uibk-unf-heading {
+	display: block;
+	position: relative;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 20px;
+	color: rgba(49, 53, 59, 0.96);
+	text-decoration: initial;
+	margin: 0px;
+}
+
+.css-k008qs {
+	display: flex;
+}
+
+.order-detail__border--grey {
+	border-top: 0.5px solid rgba(0, 0, 0, 0.12);
+}
+
+/* End Detail Order */
+
+/* Begin Empty Transaksi */
+.css-yx6j1p {
+	text-align: center;
+}
+
+.css-1b07y2p {
+	width: 150px;
+	height: 100px;
+}
+
+.css-1hyxau2 {
+	color: rgba(49, 53, 59, 0.68);
+	font-size: 14px;
+	font-weight: unset;
+	line-height: 16px;
+	margin: 0.25rem 0px;
+}
+
+.css-1hn15u {
+	color: rgba(49, 53, 59, 0.68);
+	font-size: 14px;
+	font-weight: unset;
+	line-height: 16px;
+	margin: 0.25rem 0.25rem 2rem;
+}
+
+.css-15yrpiz {
+	color: rgba(49, 53, 59, 0.68);
+	font-weight: bold;
+	line-height: 16px;
+}
+
+/* End Empty Transaksi */
+
+/* Alert Pemberitahun CSS Tokopedia */
+@media (min-width: 1200px) {
+	.col-lg-1 {
+		width: 10.33333333%;
+	}
+}
+
+.css-103meyn-unf-ticker {
+	width: 100%;
+	border-radius: 8px;
+	position: relative;
+	margin: auto auto 36px;
+	padding: 0px;
+	overflow: hidden;
+	text-align: left;
+}
+
+.css-103meyn-unf-ticker h4 {
+	font-size: 16px;
+}
+
+.css-tfd7c3 {
+	display: flex;
+	flex-wrap: nowrap;
+	left: 0px;
+	margin: 0px auto;
+	position: relative;
+	top: 0px;
+	transition: transform 240ms linear 0s;
+	width: 100%;
+}
+
+.css-1ufzbh3 {
+	flex: 0 0 auto;
+	position: relative;
+	width: 100%;
+	padding: 12px 16px;
+	background-color: rgb(235, 246, 246);
+	overflow: hidden;
+}
+
+.css-1ufzbh3::before {
+	content: "";
+	width: 35px;
+	height: 35px;
+	background-image: url("../images/87f7e6cc.svg");
+	background-size: 35px 35px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: -5px;
+	left: -5px;
+}
+
+.css-a1fcc2-unf-heading {
+	display: block;
+	position: relative;
+	font-weight: 800;
+	font-family: "Nunito Sans", -apple-system, sans-serif;
+	font-size: 1.14286rem;
+	line-height: 22px;
+	color: rgba(49, 53, 59, 0.96);
+	text-decoration: initial;
+	margin: 0px 0px 8px;
+}
+
+.css-1hjz1j2-unf-heading {
+	display: block;
+	position: relative;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 20px;
+	color: rgba(49, 53, 59, 0.96);
+	margin: 0px;
+}
+
+.css-1t81mko {
+	margin: 0px;
+	font-size: 14px;
+}
+
+/* End Alert Pemberitahun CSS Tokopedia */
+
+/*animation*/
+.animation-rotate {
+	-webkit-animation: spin .5s linear infinite;
+	-moz-animation: spin .5s linear infinite;
+	animation: spin .5s linear infinite;
+}
+
+@-moz-keyframes spin {
+	100% {
+		-moz-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
