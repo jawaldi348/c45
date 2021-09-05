@@ -38,7 +38,7 @@
                 <div class="navbar-custom-menu">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="#"><i class="fa fa-power-off"></i></a>
+                            <a href="<?= site_url('login/logout') ?>" class="bg-red"><i class="fa fa-power-off"></i> Logout</a>
                         </li>
                     </ul>
                 </div>
