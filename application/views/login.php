@@ -29,7 +29,7 @@
         </div>
         <div class="login-box-body">
             <p class="login-box-msg">Masuk ke akun Anda</p>
-            <?= form_open('#', ['id' => 'form_signin']) ?>
+            <?= form_open('login/masuk', ['id' => 'form_signin']) ?>
             <div class="form-group has-feedback">
                 <input type="text" name="username" class="form-control" placeholder="Username">
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -44,6 +44,34 @@
             <?= form_close() ?>
         </div>
     </div>
+    <script>
+        $(document).ready(function() {
+            $('#form_signin').on('submit', function(event) {
+                event.preventDefault();
+                $.ajax({
+                    url: $(this).attr('action'),
+                    type: "POST",
+                    data: $(this).serialize(),
+                    dataType: "json",
+                    beforeSend: function() {
+                        $('.btn_signin').button('loading');
+                    },
+                    success: function(data) {
+                        if (data.status == false) {
+                            if (data.username_error != '') {
+                                $('#username_error').html(data.username_error);
+                            } else {
+                                $('#username_error').html('');
+                            }
+                        } else {
+                            window.location.href = "<?= site_url('welcome') ?>";
+                        }
+                        $('.btn_signin').button('reset');
+                    }
+                })
+            });
+        });
+    </script>
 </body>
 
 </html>
