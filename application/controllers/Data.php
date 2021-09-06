@@ -66,6 +66,13 @@ class Data extends CI_Controller
         $json['status'] = true;
         echo json_encode($json);
     }
+    public function hapus()
+    {
+        $kode = $this->input->get('kode');
+        $this->db->where('id', $kode)->delete('data');
+        $json['status'] = true;
+        echo json_encode($json);
+    }
 }
 
 /* End of file Data.php */
