@@ -72,4 +72,25 @@
             }
         });
     }
+
+    $(document).on('submit', '.form_create', function(e) {
+        $.ajax({
+            type: "post",
+            url: $(this).attr('action'),
+            data: $(this).serialize(),
+            dataType: "json",
+            cache: false,
+            beforeSend: function() {
+                $('.store_data').button('loading');
+            },
+            success: function(resp) {
+                $("#modal_create").modal('hide');
+                load_data();
+            },
+            complete: function() {
+                $('.store_data').button('reset');
+            }
+        });
+        return false;
+    });
 </script>

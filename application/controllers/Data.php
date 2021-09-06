@@ -32,6 +32,20 @@ class Data extends CI_Controller
     {
         $this->load->view('data/tambah');
     }
+    public function simpan()
+    {
+        $post = $this->input->post(null, TRUE);
+        $data = array(
+            'nama' => $post['nama'],
+            'jumlah' => $post['jumlah'],
+            'periksa' => $post['periksa'],
+            'lama' => $post['lama'],
+            'kondisi' => $post['kondisi'],
+        );
+        $this->db->insert('data', $data);
+        $json['status'] = true;
+        echo json_encode($json);
+    }
 }
 
 /* End of file Data.php */
