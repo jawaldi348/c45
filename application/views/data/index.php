@@ -17,8 +17,47 @@
                             <th class="text-center" width="60px">Aksi</th>
                         </tr>
                     </thead>
+                    <tbody id="data"></tbody>
                 </table>
             </div>
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        load_data();
+    });
+
+    function load_data() {
+        $.ajax({
+            url: "<?= site_url('data/tampil') ?>",
+            method: "GET",
+            dataType: 'json',
+            success: function(data) {
+                var html = '';
+                var no = 1;
+                if (data == 0) {
+                    html += '<tr>';
+                    html += '<td colspan="7" class="text-center">Belum ada data</td>';
+                    html += '</tr>';
+                } else {
+                    for (var i = 0; i < data.length; i++) {
+                        html += '<tr>';
+                        html += '<td class="text-center">' + no + '.</td>';
+                        html += '<td>' + data[i].nama + '</td>';
+                        html += '<td>' + data[i].jumlah + '</td>';
+                        html += '<td>' + data[i].periksa + '</td>';
+                        html += '<td>' + data[i].lama + '</td>';
+                        html += '<td>' + data[i].kondisi + '</td>';
+                        html += '<td class="text-center">';
+                        html += '<a href="#" title="Edit"><i class="icon-pencil7 text-green"></i></a> <a href="#"><i class="icon-trash text-red" title="Hapus"></i></a>';
+                        html += '</td>';
+                        html += '</tr>';
+                        no++;
+                    }
+                }
+                $('#data').html(html);
+            }
+        })
+    }
+</script>
