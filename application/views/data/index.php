@@ -2,7 +2,7 @@
     <div class="col-xs-12">
         <div class="box box-default">
             <div class="box-header with-border">
-                <button class="btn btn-social btn-flat btn-success btn-sm"><i class="icon-plus3"></i> Tambah Data</button>
+                <button class="btn btn-social btn-flat btn-success btn-sm" onclick="tambah()"><i class="icon-plus3"></i> Tambah Data</button>
             </div>
             <div class="box-body table-responsive">
                 <table class="table table-bordered table-striped">
@@ -23,6 +23,7 @@
         </div>
     </div>
 </div>
+<div id="tampil_modal"></div>
 <script>
     $(document).ready(function() {
         load_data();
@@ -59,5 +60,16 @@
                 $('#data').html(html);
             }
         })
+    }
+
+    function tambah() {
+        $.ajax({
+            url: "<?= site_url('data/tambah') ?>",
+            type: "GET",
+            success: function(resp) {
+                $("#tampil_modal").html(resp);
+                $("#modal_create").modal('show');
+            }
+        });
     }
 </script>

@@ -28,6 +28,10 @@ class Data extends CI_Controller
         }
         echo json_encode($data);
     }
+    public function tambah()
+    {
+        $this->load->view('data/tambah');
+    }
 }
 
 /* End of file Data.php */
