@@ -46,6 +46,12 @@ class Data extends CI_Controller
         $json['status'] = true;
         echo json_encode($json);
     }
+    public function edit()
+    {
+        $kode = $this->input->get('kode');
+        $data['data'] = $this->db->where('id', $kode)->get('data')->row_array();
+        $this->load->view('data/edit', $data);
+    }
 }
 
 /* End of file Data.php */

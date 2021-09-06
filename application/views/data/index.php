@@ -51,7 +51,7 @@
                         html += '<td>' + data[i].lama + '</td>';
                         html += '<td>' + data[i].kondisi + '</td>';
                         html += '<td class="text-center">';
-                        html += '<a href="#" title="Edit"><i class="icon-pencil7 text-green"></i></a> <a href="#"><i class="icon-trash text-red" title="Hapus"></i></a>';
+                        html += '<a href="javascript:void(0)" onclick="edit(' + data[i].id + ')" title="Edit"><i class="icon-pencil7 text-green"></i></a> <a href="#"><i class="icon-trash text-red" title="Hapus"></i></a>';
                         html += '</td>';
                         html += '</tr>';
                         no++;
@@ -66,6 +66,20 @@
         $.ajax({
             url: "<?= site_url('data/tambah') ?>",
             type: "GET",
+            success: function(resp) {
+                $("#tampil_modal").html(resp);
+                $("#modal_create").modal('show');
+            }
+        });
+    }
+
+    function edit(kode) {
+        $.ajax({
+            url: "<?= site_url('data/edit') ?>",
+            type: "GET",
+            data: {
+                kode: kode
+            },
             success: function(resp) {
                 $("#tampil_modal").html(resp);
                 $("#modal_create").modal('show');
