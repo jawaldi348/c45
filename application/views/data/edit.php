@@ -5,7 +5,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">Edit Data</h4>
             </div>
-            <?= form_open('#', ['class' => 'form_create'], ['kode' => $data['id']]) ?>
+            <?= form_open('data/update', ['class' => 'form_create'], ['kode' => $data['id']]) ?>
             <div class="modal-body">
                 <div class="form-group">
                     <label>Nama Alat</label>

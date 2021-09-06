@@ -52,6 +52,20 @@ class Data extends CI_Controller
         $data['data'] = $this->db->where('id', $kode)->get('data')->row_array();
         $this->load->view('data/edit', $data);
     }
+    public function update()
+    {
+        $post = $this->input->post(null, TRUE);
+        $data = array(
+            'nama' => $post['nama'],
+            'jumlah' => $post['jumlah'],
+            'periksa' => $post['periksa'],
+            'lama' => $post['lama'],
+            'kondisi' => $post['kondisi'],
+        );
+        $this->db->where('id', $post['kode'])->update('data', $data);
+        $json['status'] = true;
+        echo json_encode($json);
+    }
 }
 
 /* End of file Data.php */
