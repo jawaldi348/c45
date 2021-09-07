@@ -73,6 +73,10 @@ class Data extends CI_Controller
         $json['status'] = true;
         echo json_encode($json);
     }
+    public function upload()
+    {
+        $this->load->view('data/upload');
+    }
 }
 
 /* End of file Data.php */
