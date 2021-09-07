@@ -3,6 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Data extends CI_Controller
 {
+    private $filename = "import_data";
     public function __construct()
     {
         parent::__construct();
@@ -97,6 +98,47 @@ class Data extends CI_Controller
             $return = array('result' => 'failed', 'file' => '', 'error' => $this->upload->display_errors());
             return $return;
         }
+    }
+    public function import()
+    {
+        $upload = $this->upload_file($this->filename);
+        if ($upload['result'] == "success") {
+            include APPPATH . 'third_party/PHPExcel/PHPExcel.php';
+            $excelreader = new PHPExcel_Reader_Excel2007();
+            $loadexcel = $excelreader->load('excel/' . $this->filename . '.xlsx');
+            $sheet = $loadexcel->getActiveSheet()->toArray(null, true, true, true);
+            $data = array();
+            $numrow = 1;
+            foreach ($sheet as $row) {
+                if ($numrow > 1) {
+                    $nama = $row['A'];
+                    $jumlah = $row['B'];
+                    $periksa = $row['C'];
+                    $lama = $row['D'];
+                    $kondisi = $row['E'];
+                    $data = array(
+                        'nama' => $nama,
+                        'jumlah' => $jumlah,
+                        'periksa' => $periksa,
+                        'lama' => $lama,
+                        'kondisi' => $kondisi,
+                    );
+                    $this->db->insert('data', $data);
+                }
+                $numrow++;
+            }
+            $json = array(
+                'status' => true,
+                'pesan' => 'Data berhasil diupload',
+                'data' => $data
+            );
+        } else {
+            $json = array(
+                'status' => false,
+                'upload_error' => $upload['error']
+            );
+        }
+        echo json_encode($json);
     }
 }
 
